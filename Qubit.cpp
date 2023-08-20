@@ -36,8 +36,8 @@ void Qubit::applyHadamard() {
 
 // Pauli-Y Gate:
 void Qubit::applyPauliY() {
-    std::complex<double> newAlpha = -std::imag(beta);
-    std::complex<double> newBeta = std::imag(alpha);
+    std::complex<double> newAlpha = std::complex<double>(0, 1) * beta;
+    std::complex<double> newBeta = -std::complex<double>(0, 1) * alpha;
     alpha = newAlpha;
     beta = newBeta;
 }

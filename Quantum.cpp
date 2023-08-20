@@ -4,6 +4,7 @@
 #include "Quantum.h"
 #include "Qubit.h"  
 #include "HermitianMatrixTests.h"
+#include "QubitTests.h"
 
 using namespace std;
 
@@ -31,6 +32,11 @@ int main()
     testGetAdjoint();
     testMultiply();
     cout << "All HermitianMatrix tests passed!" << endl;
+
+	// Qubit tests
+    testApplyPauliX();
+    testApplyPauliY();
+    testApplyPhase();
 
     return 0;
 }

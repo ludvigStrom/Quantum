@@ -10,4 +10,3 @@
 
 #include <iostream>
 class Qubit;
-// TODO: Reference additional headers your program requires here.
