@@ -36,7 +36,13 @@ int main()
 	// Qubit tests
     testApplyPauliX();
     testApplyPauliY();
+    testApplyPauliZ();
     testApplyPhase();
+    testApplyHadamard();
+    testApplyTGate();
+    testApplyControlledZ();
+    testApplySwap();
+    testMeasure();
 
     return 0;
 }

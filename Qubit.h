@@ -25,9 +25,9 @@ public:
     void applyHadamard();
     void applyPhase();
     void applyTGate();
-    void applyCNOT(Qubit& control, Qubit& target);
-    void applyControlledZ(Qubit& control, Qubit& target);
-    void applySwap(Qubit& q1, Qubit& q2);
+    static void applyCNOT(Qubit& control, Qubit& target);
+    static void applyControlledZ(Qubit& control, Qubit& target);
+    static void applySwap(Qubit& q1, Qubit& q2);
     int measure();
     void printState() const;
 };
