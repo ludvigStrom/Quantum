@@ -1,5 +1,5 @@
 # Quantum
-The Quantum project provides a simple C++ implementation for quantum computing concepts, including qubits and Hermitian matrices.
+The Quantum project provides a simple C++ implementation for quantum computing concepts, including **qubits** and **Hermitian matrices**.
 
 ## Features
 Qubit Operations: The project provides a Qubit class that allows you to:
