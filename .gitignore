@@ -948,6 +948,11 @@ install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
 _deps
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+*.cmake
 
 ##### C++
 # Prerequisites
@@ -1055,3 +1060,6 @@ I have some suggestions to make this even better!
 *.dis
 # C/C++ binary extension file
 *.bin
+
+# External libraries (if you don't want to track changes in these submodules)
+external/

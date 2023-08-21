@@ -7,7 +7,7 @@
 #include "QubitTests.h"
 #include "Oracle.h"
 #include "DeutschJosza.h"
-
+#include "BlochSphereASCII.h"
 
 using namespace std;
 
@@ -49,14 +49,22 @@ int main()
 
     Oracle myOracle(true);  // or Oracle myOracle(false);
 
-    DeutschJosza dj(myOracle, 3); // Let's assume 3 qubits for this example
-    if (dj.isFunctionConstant()) {
+    DeutschJosza deutschJosza(myOracle, 3); // Let's assume 3 qubits for this example
+    if (deutschJosza.isFunctionConstant()) {
         std::cout << "The function is constant." << std::endl;
     }
     else {
         std::cout << "The function is balanced." << std::endl;
     }
 
-    return 0;
+    Qubit qubit; // Assuming you've set the qubit's state
+    BlochSphereASCII sphere(qubit);
+    sphere.draw();
 
+    qubit.applyControlledZ(q, qubit);
+
+    sphere.draw();
+    
+    return 0;
+    
 }

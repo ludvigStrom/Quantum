@@ -31,4 +31,8 @@ public:
     static void applySwap(Qubit& q1, Qubit& q2);
     int measure();
     void printState() const;
+    bool isSet() const;
+
+    std::complex<double> getAlpha() const;
+    std::complex<double> getBeta() const;
 };

@@ -13,6 +13,8 @@ public:
 
     // Apply a gate to a specific qubit in the register
     void applyGateToQubit(int qubitIndex, void (Qubit::* gate)());
+    
+    void applyCNOT(int controlQubitIndex, Qubit& targetQubit);
 
     // Get a specific qubit from the register
     Qubit& getQubit(int qubitIndex);

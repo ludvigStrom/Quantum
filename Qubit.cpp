@@ -24,6 +24,11 @@ Qubit::Qubit(int initialState) {
 }
 
 
+bool Qubit::isSet() const {
+    // Check if the qubit is in the |1⟩ state
+    return std::norm(beta) == 1.0;
+}
+
 // Set the qubit state using coefficients for |0⟩ and |1⟩ states
 void Qubit::setState(std::complex<double> a, std::complex<double> b) {
     double norm = std::sqrt(std::norm(a) + std::norm(b));
@@ -101,4 +106,12 @@ int Qubit::measure() {
 // Print the qubit state
 void Qubit::printState() const {
     std::cout << "Qubit state: " << alpha << "|0> + " << beta << "|1>" << std::endl;
+}
+
+std::complex<double> Qubit::getAlpha() const {
+    return alpha;
+}
+
+std::complex<double> Qubit::getBeta() const {
+    return beta;
 }

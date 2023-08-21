@@ -30,4 +30,3 @@ bool DeutschJosza::isFunctionConstant() {
     }
     return true; // Function is constant
 }
-

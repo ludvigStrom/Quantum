@@ -13,6 +13,13 @@ void QuantumRegister::applyGateToQubit(int qubitIndex, void (Qubit::* gate)()) {
     (qubits[qubitIndex].*gate)();
 }
 
+void QuantumRegister::applyCNOT(int controlQubitIndex, Qubit& targetQubit) {
+    // Check if the control qubit is in the |1> state
+    if (qubits[controlQubitIndex].isSet()) {  // isSet() is a method in the Qubit class that checks if the qubit is in the |1> state
+        targetQubit.applyPauliX();  // Apply the Pauli-X gate to the target qubit
+    }
+}
+
 Qubit& QuantumRegister::getQubit(int qubitIndex) {
     return qubits[qubitIndex];
 }
