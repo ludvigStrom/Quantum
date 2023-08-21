@@ -5,6 +5,25 @@
 // Constructor: Initializes the qubit to the |0⟩ state by default
 Qubit::Qubit() : alpha(1.0), beta(0.0) {}
 
+// Constructor: Initializes the qubit to the |0⟩ or |1⟩ state
+Qubit::Qubit(int initialState) {
+    if (initialState == 0) {
+        alpha = 1.0;
+        beta = 0.0;
+    }
+    else if (initialState == 1) {
+        alpha = 0.0;
+        beta = 1.0;
+    }
+    else {
+        std::cerr << "Error: Invalid initial state for qubit. Must be 0 or 1." << std::endl;
+        // Default to |0⟩ state
+        alpha = 1.0;
+        beta = 0.0;
+    }
+}
+
+
 // Set the qubit state using coefficients for |0⟩ and |1⟩ states
 void Qubit::setState(std::complex<double> a, std::complex<double> b) {
     double norm = std::sqrt(std::norm(a) + std::norm(b));

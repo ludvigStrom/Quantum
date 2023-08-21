@@ -18,6 +18,7 @@ private:
 
 public:
     Qubit();
+    Qubit(int initialState);
     void setState(std::complex<double> a, std::complex<double> b);
     void applyPauliX();
     void applyPauliZ();

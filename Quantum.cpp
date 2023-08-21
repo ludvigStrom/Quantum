@@ -5,6 +5,9 @@
 #include "Qubit.h"  
 #include "HermitianMatrixTests.h"
 #include "QubitTests.h"
+#include "Oracle.h"
+#include "DeutschJosza.h"
+
 
 using namespace std;
 
@@ -44,5 +47,16 @@ int main()
     testApplySwap();
     testMeasure();
 
+    Oracle myOracle(true);  // or Oracle myOracle(false);
+
+    DeutschJosza dj(myOracle, 3); // Let's assume 3 qubits for this example
+    if (dj.isFunctionConstant()) {
+        std::cout << "The function is constant." << std::endl;
+    }
+    else {
+        std::cout << "The function is balanced." << std::endl;
+    }
+
     return 0;
+
 }
