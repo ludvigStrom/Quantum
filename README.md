@@ -2,7 +2,7 @@
 The Quantum project provides a simple C++ implementation for quantum computing concepts, including **qubits** and **Hermitian matrices**.
 
 ## Features
-###Qubit Operations: 
+### Qubit Operations: 
 The project provides a `Qubit class` that allows you to:
 *  Initialize qubits and set their states.
 * Apply various quantum gates such as Pauli-X, Pauli-Y, Pauli-Z, Hadamard, Phase, and T-Gate.
